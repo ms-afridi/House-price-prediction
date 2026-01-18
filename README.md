@@ -31,7 +31,7 @@ Furnishing Status: Unfurnished, Semi-Furnished, Furnished
 Tenant Preferred: Bachelors/Family, Bachelors, Family
 Bathroom: Number of bathrooms (1-7)
 Point of Contact: Contact Owner, Contact Agent
-Rental Floor: Floor number (2 to 22)
+Rental Floor: Floor number (-2 to 22)
 Total Number of Floors: Total floors in building (0-30)
 Fixed Size: Apartment size in square feet (10-3100)
 Square Feet Rent: Rent per square foot (10-120)
@@ -45,10 +45,32 @@ cd apartment-rent-prediction
 
 Install required dependencies:
 
-pip install -r requirements.txt
+bashpip install -r requirements.txt
+That's it! All dependencies including Streamlit, NumPy, Pandas, LightGBM, and scikit-learn will be installed automatically.
+Usage
+
+Run the Streamlit app:
+
+bashstreamlit run app.py
 ```
 
-```
+2. Open your web browser and navigate to the local URL (typically `http://localhost:8501`)
+
+3. Adjust the sliders and dropdowns to match your apartment specifications
+
+4. Click the "Predict Rent" button to get the estimated rental price in INR (₹)
+
+## Model
+
+- **Algorithm**: LightGBM (Light Gradient Boosting Machine)
+- **Model File**: `lgbm_model.pkl`
+- **Training Notebook**: `House_Rent.ipynb`
+
+The LightGBM model was chosen for its:
+- High accuracy in regression tasks
+- Fast training and prediction speed
+- Ability to handle categorical features efficiently
+- Low memory usage
 
 ## Project Structure
 ```
