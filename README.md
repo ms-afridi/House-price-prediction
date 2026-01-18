@@ -1,57 +1,67 @@
-🏠 Apartment Rent Prediction App
+# 🏠 Apartment Rent Prediction App
+
 A machine learning-powered web application that predicts apartment rental prices in major Indian cities using LightGBM algorithm.
-Overview
+
+## Overview
+
 This project uses a trained LightGBM (Light Gradient Boosting Machine) model to estimate apartment rental prices based on various features like location, size, furnishing status, and amenities. The interactive web interface is built with Streamlit, making it easy for users to get instant rent predictions.
-Features
 
-Interactive Web Interface: User-friendly sliders and dropdowns for inputting apartment details
-Real-time Predictions: Instant rent estimates based on your input parameters
-Multiple City Support: Covers major Indian cities including Kolkata, Mumbai, Bangalore, Delhi, Chennai, and Hyderabad
-Comprehensive Parameters: Takes into account 10 different features for accurate predictions
+## Features
 
-Dataset
-The model is trained on the House_Rent_Dataset.csv which includes rental data from various Indian cities with features such as:
+- **Interactive Web Interface**: User-friendly sliders and dropdowns for inputting apartment details
+- **Real-time Predictions**: Instant rent estimates based on your input parameters
+- **Multiple City Support**: Covers major Indian cities including Kolkata, Mumbai, Bangalore, Delhi, Chennai, and Hyderabad
+- **Comprehensive Parameters**: Takes into account 10 different features for accurate predictions
 
-Number of bedrooms (BHK)
-City location
-Furnishing status
-Tenant preferences
-Number of bathrooms
-Point of contact
-Floor details
-Apartment size
-Rent per square foot
+## Dataset
 
-Input Features
+The model is trained on the `House_Rent_Dataset.csv` which includes rental data from various Indian cities with features such as:
+
+- Number of bedrooms (BHK)
+- City location
+- Furnishing status
+- Tenant preferences
+- Number of bathrooms
+- Point of contact
+- Floor details
+- Apartment size
+- Rent per square foot
+
+## Input Features
+
 The application accepts the following inputs:
 
-BHK: Number of bedrooms (1-6)
-City: Kolkata, Mumbai, Bangalore, Delhi, Chennai, Hyderabad
-Furnishing Status: Unfurnished, Semi-Furnished, Furnished
-Tenant Preferred: Bachelors/Family, Bachelors, Family
-Bathroom: Number of bathrooms (1-7)
-Point of Contact: Contact Owner, Contact Agent
-Rental Floor: Floor number (-2 to 22)
-Total Number of Floors: Total floors in building (0-30)
-Fixed Size: Apartment size in square feet (10-3100)
-Square Feet Rent: Rent per square foot (10-120)
+1. **BHK**: Number of bedrooms (1-6)
+2. **City**: Kolkata, Mumbai, Bangalore, Delhi, Chennai, Hyderabad
+3. **Furnishing Status**: Unfurnished, Semi-Furnished, Furnished
+4. **Tenant Preferred**: Bachelors/Family, Bachelors, Family
+5. **Bathroom**: Number of bathrooms (1-7)
+6. **Point of Contact**: Contact Owner, Contact Agent
+7. **Rental Floor**: Floor number (-2 to 22)
+8. **Total Number of Floors**: Total floors in building (0-30)
+9. **Fixed Size**: Apartment size in square feet (10-3100)
+10. **Square Feet Rent**: Rent per square foot (10-120)
 
-Installation
+## Installation
 
-Clone this repository:
-
-bashgit clone https://github.com/ms-afridi/apartment-rent-prediction.git
+1. Clone this repository:
+```bash
+git clone https://github.com/ms-afridi/apartment-rent-prediction.git
 cd apartment-rent-prediction
+```
 
-Install required dependencies:
+2. Install required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-bashpip install -r requirements.txt
 That's it! All dependencies including Streamlit, NumPy, Pandas, LightGBM, and scikit-learn will be installed automatically.
-Usage
 
-Run the Streamlit app:
+## Usage
 
-bashstreamlit run app.py
+1. Run the Streamlit app:
+```bash
+streamlit run app.py
 ```
 
 2. Open your web browser and navigate to the local URL (typically `http://localhost:8501`)
@@ -73,6 +83,7 @@ The LightGBM model was chosen for its:
 - Low memory usage
 
 ## Project Structure
+
 ```
 apartment-rent-prediction/
 │
@@ -82,30 +93,42 @@ apartment-rent-prediction/
 ├── House_Rent.ipynb           # Model training notebook
 ├── requirements.txt           # Python dependencies
 └── README.md                  # Project documentation
-How It Works
+```
 
-The user inputs apartment details through the Streamlit interface
-The input data is formatted into a pandas DataFrame
-The pre-trained LightGBM model processes the features
-The model outputs a rental price prediction in INR
-The result is displayed to the user with proper formatting
+## How It Works
 
-Future Enhancements
+1. The user inputs apartment details through the Streamlit interface
+2. The input data is formatted into a pandas DataFrame
+3. The pre-trained LightGBM model processes the features
+4. The model outputs a rental price prediction in INR
+5. The result is displayed to the user with proper formatting
 
-Add more cities and regions
-Include amenities like parking, gym, pool
-Implement price trends and visualizations
-Add comparison feature for multiple properties
-Deploy to cloud platforms (Heroku, Streamlit Cloud, AWS)
+## Future Enhancements
 
-Contributing
+- Add more cities and regions
+- Include amenities like parking, gym, pool
+- Implement price trends and visualizations
+- Add comparison feature for multiple properties
+- Deploy to cloud platforms (Heroku, Streamlit Cloud, AWS)
+
+## Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
-License
-This project is open source and available under the MIT License.
-Author
-ms-afridi
-Acknowledgments
 
-Dataset source: House Rent Dataset
-Built with Streamlit and LightGBM
-Inspired by the need for transparent rental pricing in Indian metropolitan cities
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Author
+
+**ms-afridi**
+
+## Acknowledgments
+
+- Dataset source: House Rent Dataset
+- Built with Streamlit and LightGBM
+- Inspired by the need for transparent rental pricing in Indian metropolitan cities
+
+---
+
+**Note**: This is a prediction tool and should be used for estimation purposes only. Actual rental prices may vary based on additional factors not included in the model.
